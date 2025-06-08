@@ -1,10 +1,17 @@
-HELP.md
+# Maven build output
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### STS ###
+# Maven Wrapper files - keep wrapper scripts and jar
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# Ignore everything inside .mvn except the wrapper folder and files
+.mvn/**
+!.mvn/wrapper/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+### Spring Tool Suite (STS) ###
 .apt_generated
 .classpath
 .factorypath
@@ -14,7 +21,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -31,3 +38,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# OS-specific files (optional)
+.DS_Store
+Thumbs.db
