@@ -10,6 +10,7 @@ A scalable, efficient, and concurrent-safe RESTful API to generate unique tracki
 - [API Specification](#api-specification)
 - [Getting Started](#getting-started)
 - [Testing the API](#testing-the-api)
+- [Deployment](#deployment)
 ---
 
 ## Overview
@@ -91,3 +92,14 @@ http://localhost:8080/next-tracking-number
 Example request using curl:
 ```bash
 curl --request GET --url 'http://localhost:8080/next-tracking-number?origin_country_id=MY&destination_country_id=ID&weight=1.234&created_at=2018-11-20T19%3A29%3A32Z&customer_id=de619854-b59b-425e-9db4-943979e1bd49&customer_name=RedBox%20Logistics&customer_slug=redbox-logistics'```
+```
+
+## Deployment
+The application has been deployed on an AWS EC2 instance.
+Ensure the environment is configured with Java 17 and Maven for building the project.
+
+API: http://ec2-52-23-226-68.compute-1.amazonaws.com:8080/next-tracking-number?origin_country_id=MY&destination_country_id=ID&weight=1.234&created_at=2018-11-20T19:29:32Z&customer_id=de619854-b59b-425e-9db4-943979e1bd49&customer_name=RedBox%20Logistics&customer_slug=redbox-logistics
+
+```bash
+curl --request GET --url 'http://ec2-52-23-226-68.compute-1.amazonaws.com:8080/next-tracking-number?origin_country_id=MY&destination_country_id=ID&weight=1.234&created_at=2018-11-20T19%3A29%3A32Z&customer_id=de619854-b59b-425e-9db4-943979e1bd49&customer_name=RedBox%20Logistics&customer_slug=redbox-logistics'
+```
